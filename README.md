@@ -6,7 +6,12 @@ SPA 환경에서 loader를 이용하여 common.js 를 로드 후에, js 안에 �
 
 ## 개발 환경
 
-**javascript(es6)**, **gulp-cli: v2.3.0**, **gulp: v4.0.2**, **node: v12.22.9**, **browser-sync**, **babel**
+1. **javascript(es6)**
+2. **gulp-cli: v2.3.0**
+3. **gulp: v4.0.2**
+4. **node: v12.22.9**
+5. **browser-sync**
+6. **babel**
 
 ## 머지
 
@@ -19,4 +24,3 @@ SPA 환경에서 loader를 이용하여 common.js 를 로드 후에, js 안에 �
 ## 경로
 
 `dist/common.js`
-# loader-common
