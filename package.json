@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ibsheet/loader-common"
   },
-  "author": "",
+  "author": "hojae-lee",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/ibsheet/loader-common/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/ibsheet/loader-common#readme",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.10",
