@@ -36,7 +36,7 @@ IBSheetConvert.v7.convertDateFormat = obj => {
             //실제 값
             let v = (cdata[row])[colName];
             //MMdd만 값이 8자리 이상이면 중간에 4자리만 pick
-            if (changeCol[colName].format === 'MMdd' && v.length != 4) {
+            if (changeCol[colName].format === 'MMdd' && v.length !== 4) {
               if (v.length > 7) {
                 v = v.substr(4, 4);
               }
