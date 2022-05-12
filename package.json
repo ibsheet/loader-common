@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "gulp start",
-    "merge": "gulp merge"
+    "serve": "tsc && gulp start",
+    "merge": "tsc && gulp merge",
+    "dev": "tsc -w"
   },
   "repository": {
     "type": "git",
