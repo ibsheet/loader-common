@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es5",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "declaration": true,
     "outDir": "./tsdist",
+    "noImplicitAny": true
   },
-  "include": ["src/convert_v7/*", "src/global/*"],
+  "include": ["src/*/*"],
   "exclude": ["node_modules"]
 }
