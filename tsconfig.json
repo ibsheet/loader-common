@@ -7,7 +7,7 @@
     "strict": true,
     "declaration": true,
     "outDir": "./tsdist",
-    "noImplicitAny": true
+    "noImplicitAny": false
   },
   "include": ["src/*/*"],
   "exclude": ["node_modules"]
