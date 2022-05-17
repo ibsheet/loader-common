@@ -1,5 +1,6 @@
-const IB_Preset = {
-  // 날짜 시간 포멧
+import { Preset, IB_RowType } from './intertace';
+
+export const IB_Preset: Preset = {
   'YMD': {
     Type: 'Date',
     Align: 'Center',
@@ -90,7 +91,6 @@ const IB_Preset = {
     Size: 8,
     EmptyValue: '<span style="color:#AAA">일,월,년 순으로 숫자만 입력해 주세요.</span>'
   },
-
   // 숫자 포멧
   'Integer': {
     Type: 'Int',
@@ -116,7 +116,6 @@ const IB_Preset = {
     Format: '#,###.######',
     Width: 100
   },
-
   // 기타포멧
   'IdNo': {
     Type: 'Text',
@@ -167,11 +166,11 @@ const IB_Preset = {
         evtParam.sheet.deleteRow(evtParam.row, evtParam.row[evtParam.col]);
         //자식행 추출
         const rows = evtParam.sheet.getChildRows(evtParam.row);
-        let row = {};
-        rows.push(evtParam.row);
+        let row: IB_RowType = {};
 
+        rows.push(evtParam.row);
         //모두 체크하고 편집 불가로 변경
-        for(let i = 0; i < rows.length; i++) {
+        for (let i = 0; i < rows.length; i++) {
           row = rows[i];
           evtParam.sheet.setValue(row, evtParam.col, chked, 0);
           row.CanEdit = !evtParam.row[evtParam.col];

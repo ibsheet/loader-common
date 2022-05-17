@@ -1,3 +1,4 @@
+import { IBSheetConvert } from './7version';
 /*
  * ibsheet7 AcceptKey 속성 대응
  * param list

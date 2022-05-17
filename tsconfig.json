@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "declaration": true,
+    "outDir": "./tsdist",
+    "noImplicitAny": true
+  },
+  "include": ["src/*/*"],
+  "exclude": ["node_modules"]
+}
