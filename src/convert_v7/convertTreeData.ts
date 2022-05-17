@@ -1,3 +1,17 @@
+import { IBSheetConvert, IB_OBJ } from './7version';
+
+function clone(obj: IB_OBJ | null): object {
+  if (obj === null || typeof obj !== 'object') return obj as any;
+  const copy = obj.constructor();
+
+  for (let attr in obj) {
+    if (obj.hasOwnProperty(attr)) {
+      copy[attr] = clone(obj[attr]);
+    }
+  }
+  return copy;
+}
+
 /* ibsheet7의 Tree 구조 Json 데이터를 ibsheet8 형식에 맞게 파싱해주는 메소드 */
 IBSheetConvert.v7.convertTreeData = data7 => {
     let targetArr;
@@ -18,8 +32,8 @@ IBSheetConvert.v7.convertTreeData = data7 => {
         return false;
     }
 
-    targetArr = targetArr.reduce((accum, currentVal, curretIndex, array) => {
-      const cloneObj = clone(currentVal);
+    targetArr = targetArr.reduce((accum: any[], currentVal: { [x: string]: number; }, curretIndex: any, array: any) => {
+      const cloneObj: IB_OBJ = clone(currentVal);
       if (cloneObj["HaveChild"]) {
         cloneObj["Count"] = true;
         delete cloneObj["HaveChild"];
@@ -34,8 +48,8 @@ IBSheetConvert.v7.convertTreeData = data7 => {
         accum.push(cloneObj);
       } else if (currentVal["Level"]) {
         let parent = accum[accum.length - 1];
-        for (let i = startLevel; i < parseInt(currentVal["Level"]); i++) {
-          if (i === parseInt(currentVal["Level"]) - 1) {
+        for (let i = startLevel; i < currentVal["Level"]; i++) {
+          if (i === currentVal["Level"] - 1) {
             if (!parent.Items) {
               parent.Items = [];
             }

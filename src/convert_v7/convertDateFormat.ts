@@ -1,14 +1,15 @@
-//Date Format migration
-//exam)
+import { IBSheetConvert, IB_OBJ } from './7version';
+
 /*
 //데이터 로드 이벤트에서 호출합니다.
 options.Events.onBeforeDataLoad: obj => {
   //날짜포맷 컬럼의 값을 ibsheet8에 맞게 변경하여 로드시킴
 }
 */
+
 IBSheetConvert.v7.convertDateFormat = obj => {
   const cdata = obj.data;
-  const changeCol = {};
+  const changeCol: IB_OBJ = {};
   //날짜 컬럼에 대한 포맷을 별도로 저장
   const cols = obj.sheet.getCols();
   for (let i = 0; i < cols.length; i++) {
