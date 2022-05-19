@@ -4,6 +4,10 @@
 
 SPA 환경에서 loader를 이용하여 common.js 를 로드 후에, js 안에 있는 공통 모듈 (객체) 들을 사용할 수 가 없기 때문에 필요한 모듈을 import 해서 사용할 수 있도록 함.
 
+## branch
+
+js-module: js 모듈 브랜치
+
 ## 개발 환경
 
 1. **javascript(es6)**
